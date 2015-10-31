@@ -1,34 +1,56 @@
-//create the div, add styles
+var skyColors = ['#00378A','#6666FF','#CC99FF', '#FFCCCC', '#FFCC99', '#FF9999'] ;
+var layersPerColor = 15 ;
+//change this hardcoded later to let the user input 
+var deezColors = [];
 
-var maxRows = 30 ;
-
-//create array that will hold colors
-var bluesPurples = ['#7A8097','#977A80','#99A0BD','#BD99A0','#977A80'] ;
-var redsOrangesYellows = ['#ff9b9b','#f0b186','#ece5a7','#e39277','#e7ae74'] ;
-
-//actual array to use
-//holds the primary colors to base pattern off of
-//pass in the first color, keep passing it in with varying luminosities
-//then pass in next color
-
-var skyColors = ['#6666FF','#CC99FF', '#FFCCCC', '#FFCC99', '#FF9999'] ;
-
-for (var i = 0 ; i < skyColors.length ; i ++)
+//prepare the sky
+for (var i = 0 ; i < skyColors.length-1 ; i ++)
 {
-	var color = skyColors[i];
-	for (var j = 0 ; j < 3 ; j ++)
-	{
-		var newShade = colorLuminance(color,0.15) ;
-		createAndAppend(newShade);
-		color = newShade;
-	}
+	generateColors (skyColors[i], skyColors[i+1], layersPerColor) 
 }
 
+//show the sky
+//creates and places each div with its color on the screen
+for (var i = 0 ; i < deezColors.length ; i ++)
+{
+	console.log(deezColors[i]) ;
+	createAndAppend('#' + deezColors[i]) ;
+}
+
+function get2DigitHex(value) {
+	value = Math.floor(value);
+	return value < 16 ? '0' + value.toString(16) : value.toString(16);
+}
+
+function generateColors(c1, c2, n) 
+{
+	var colors = [];
+
+	if (n > 0) {
+		var colors1 = hexToRgb(c1);
+		var colors2 = hexToRgb(c2);
+		var d = [(colors2.r - colors1.r) / n, (colors2.g - colors1.g) / n, (colors2.b - colors1.b) / n]
+
+		colors1 = [colors1.r, colors1.g, colors1.b];
+
+		for (var i = 0 ; i < n ; ++i) {
+			var colorStr = "";
+			for (var j = 0 ; j < 3 ; ++j){
+				colorStr += get2DigitHex(colors1[j] + d[j] * (i + 1)); 
+			}
+			colors.push(colorStr);
+			deezColors.push(colorStr) ;
+			//createAndAppend('#' + colorStr) ;
+		}
+	}
+
+	return colors;
+}
+
+//will create a div with those css dimensions
+//then will set the color to the hex code that was passed in
 function createAndAppend (color)
 {
-	//will create a div with those css dimensions
-	//then will set the color to the hex code that was passed in
-	//
 	var div = document.createElement("div");
 	console.log(document);
 	div.className = 'div1';
@@ -38,6 +60,7 @@ function createAndAppend (color)
 	//love the div
 }
 
+//used for lightening/darkening a color
 function colorLuminance(hex, lum) {
 
 	// validate hex string
@@ -57,6 +80,22 @@ function colorLuminance(hex, lum) {
 
 	return rgb;
 }
+
+//input in quotes, dont forget
+//access inidivudal colors with .g .r .b
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
+
+function rgbToHex(r, g, b) {
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
 
 function drawClouds(idName) {
 	//create div 

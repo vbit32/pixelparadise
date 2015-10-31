@@ -1,6 +1,9 @@
 .div1 {
   width: 100%;
-  height: 2%;
-  background: black; }
+  height: 1%; }
+
+.top-block .bottom-block {
+  width: 100%;
+  height: 50%; }
 
 /*# sourceMappingURL=main.css.map */
