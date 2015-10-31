@@ -4,24 +4,18 @@ var layersPerColor = 15 ;
 var deezColors = [];
 
 //prepare the sky
-for (var i = 0 ; i < skyColors.length-1 ; i ++)
-{
-	generateColors (skyColors[i], skyColors[i+1], layersPerColor) 
-}
+for (var i = 0 ; i < skyColors.length-1 ; i ++){generateColors (skyColors[i], skyColors[i+1], layersPerColor)}
 
 //show the sky
 //creates and places each div with its color on the screen
-for (var i = 0 ; i < deezColors.length ; i ++)
-{
-	console.log(deezColors[i]) ;
-	createAndAppend('#' + deezColors[i]) ;
-}
+for (var i = 0 ; i < deezColors.length ; i ++){console.log(deezColors[i]) ; createAndAppend('#' + deezColors[i], 'sky-div') ;}
 
 function get2DigitHex(value) {
 	value = Math.floor(value);
 	return value < 16 ? '0' + value.toString(16) : value.toString(16);
 }
 
+//gets two colors, creates n layer hex color codes between them
 function generateColors(c1, c2, n) 
 {
 	var colors = [];
@@ -49,14 +43,14 @@ function generateColors(c1, c2, n)
 
 //will create a div with those css dimensions
 //then will set the color to the hex code that was passed in
-function createAndAppend (color)
+function createAndAppend (color, divName)
 {
 	var div = document.createElement("div");
 	console.log(document);
-	div.className = 'div1';
+	div.className = divName;
 	div.style.background = color;
 	//append the div
-	document.body.appendChild(div);
+	document.getElementById('sky').appendChild(div);
 	//love the div
 }
 
@@ -116,6 +110,6 @@ function drawClouds(idName) {
 	//later remove js styles, add css style class to canvas element in html
 	context.closePath();
 	context.lineWidth = 5;
-	context.strokeStyle = 'blue';
+	context.strokeStyle = 'black';
 	context.stroke();
 }

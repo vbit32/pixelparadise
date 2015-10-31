@@ -1,9 +1,17 @@
-.div1 {
+.water {
+  height: 50%;
   width: 100%;
-  height: 1%; }
+  background: blue; }
 
-.top-block .bottom-block {
+.sky {
+  height: 50%;
   width: 100%;
-  height: 50%; }
+  flex-direction: column;
+  display: flex; }
+  .sky .sky-div {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top; }
 
 /*# sourceMappingURL=main.css.map */
