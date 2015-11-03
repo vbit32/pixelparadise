@@ -1,5 +1,5 @@
 var skyColors = ['#00378A','#6666FF','#CC99FF', '#FFCCCC', '#FFCC99', '#FF9999'] ;
-var layersPerColor = 15 ;
+var layersPerColor = 6 ;
 //change this hardcoded later to let the user input 
 var deezColors = [];
 
@@ -14,6 +14,8 @@ function get2DigitHex(value) {
 	value = Math.floor(value);
 	return value < 16 ? '0' + value.toString(16) : value.toString(16);
 }
+
+drawWaves("yo") ;
 
 //gets two colors, creates n layer hex color codes between them
 function generateColors(c1, c2, n) 
@@ -113,3 +115,35 @@ function drawClouds(idName) {
 	context.strokeStyle = 'black';
 	context.stroke();
 }
+
+//move to is starting point
+//line to is ending point
+function drawWaves (idName){
+    // rand drawing drawing
+
+    var canvas = document.getElementById(idName);
+	var ctx = canvas.getContext('2d');
+  	ctx.strokeStyle = "red";
+	ctx.beginPath();
+	ctx.moveTo(0, 0);
+	ctx.lineTo(0, 150);
+	ctx.lineTo(50, 150);
+	ctx.lineTo(50, 180);
+	ctx.lineTo(80, 180);
+	ctx.lineTo(80, 150);
+	ctx.lineTo(170,150);
+	ctx.lineTo(170,200);
+	ctx.lineTo(200,200);
+	ctx.lineTo(200,230);
+	ctx.lineTo(150,230);
+	ctx.lineTo(150,250);
+	ctx.lineTo(240,250);
+	ctx.lineTo(240,270);
+	ctx.lineTo(220,270);
+	ctx.lineTo(220,280);
+	ctx.lineTo(200,280);
+	ctx.lineTo(200, 300);
+	ctx.lineTo(290, 300);
+
+	ctx.stroke();
+};

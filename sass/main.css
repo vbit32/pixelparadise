@@ -1,7 +1,14 @@
 .water {
   height: 50%;
   width: 100%;
-  background: blue; }
+  background: blue;
+  overflow: visible; }
+  .water .waves {
+    z-index: 99;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    display: block; }
 
 .sky {
   height: 50%;

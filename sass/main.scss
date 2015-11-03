@@ -2,6 +2,14 @@
 	height:50%;
 	width:100%;
 	background: blue;
+	overflow: visible;
+	.waves {
+		z-index: 99;
+		width:100%;
+		margin:auto ;
+		padding: 0;
+		display: block;
+	}
 }
 
 .sky {
