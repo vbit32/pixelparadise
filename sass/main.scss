@@ -5,7 +5,6 @@
 	overflow: visible;
 	.waves {
 		z-index: 99;
-		width:100%;
 		margin:auto ;
 		padding: 0;
 		display: block;
@@ -17,6 +16,7 @@
 	width:100%;
 	flex-direction: column;
 	display: flex;
+	z-index: 5;
 
 	.sky-div {
 		width: 100%;
@@ -26,5 +26,11 @@
 	}
 }
 
-.bottom-block {
+.sun{
+	z-index: 10;
+	margin: 0 auto;
+	padding: 0;
+	vertical-align: middle;
+	display: block;
+	position: absolute;
 }

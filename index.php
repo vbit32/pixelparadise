@@ -5,10 +5,12 @@
 	</head>
 	<body>
 		<div class="sky" id="sky">
+			<canvas class="sun" width=1000px height=400px id="sun"></canvas>
 		</div>
-
+		<!--above the sky-->
+		<!--beneath the waves-->
 		<div class="water">
-			<canvas class="waves" width=1000px height=1000px id="yo"></canvas>
+			<canvas class="waves" width=1000px height=400px id="yo"></canvas>
 		</div>
 
 

@@ -1,5 +1,5 @@
 var skyColors = ['#00378A','#6666FF','#CC99FF', '#FFCCCC', '#FFCC99', '#FF9999'] ;
-var layersPerColor = 6 ;
+var layersPerColor = 5 ;
 //change this hardcoded later to let the user input 
 var deezColors = [];
 
@@ -16,6 +16,7 @@ function get2DigitHex(value) {
 }
 
 drawWaves("yo") ;
+drawSun();
 
 //gets two colors, creates n layer hex color codes between them
 function generateColors(c1, c2, n) 
@@ -123,27 +124,76 @@ function drawWaves (idName){
 
     var canvas = document.getElementById(idName);
 	var ctx = canvas.getContext('2d');
-  	ctx.strokeStyle = "red";
+  	ctx.strokeStyle = "#7474FB";
 	ctx.beginPath();
 	ctx.moveTo(0, 0);
-	ctx.lineTo(0, 150);
-	ctx.lineTo(50, 150);
-	ctx.lineTo(50, 180);
-	ctx.lineTo(80, 180);
-	ctx.lineTo(80, 150);
-	ctx.lineTo(170,150);
-	ctx.lineTo(170,200);
-	ctx.lineTo(200,200);
-	ctx.lineTo(200,230);
-	ctx.lineTo(150,230);
-	ctx.lineTo(150,250);
-	ctx.lineTo(240,250);
-	ctx.lineTo(240,270);
-	ctx.lineTo(220,270);
-	ctx.lineTo(220,280);
-	ctx.lineTo(200,280);
-	ctx.lineTo(200, 300);
-	ctx.lineTo(290, 300);
+	ctx.lineTo(0, 30);
+	ctx.lineTo(100, 30);
+	ctx.lineTo(100, 100);
+	ctx.lineTo(150, 100);
+	ctx.lineTo(150, 110);
+	ctx.lineTo(75, 110);
+	ctx.lineTo(75, 130);
+	ctx.lineTo(170, 130);
+	ctx.lineTo(170, 150);
+	ctx.lineTo(120, 150);
+	ctx.lineTo(120, 160);
+	ctx.lineTo(120, 160);
+	ctx.lineTo(175, 160);
+	ctx.lineTo(175, 180);
+	ctx.lineTo(220, 180);
+	ctx.lineTo(250, 180);
+	ctx.lineTo(250, 200);
+	ctx.lineTo(270, 200);
+	ctx.lineTo(270, 215);
+
+	ctx.moveTo(120, 220) ;
+	ctx.lineTo(180, 220) ;
+	ctx.lineTo(180, 227) ;
+	ctx.lineTo(120, 227) ;
+	ctx.lineTo(120, 227) ;
+	ctx.lineTo(120, 220) ;
+
+	ctx.moveTo(270, 215);
+	ctx.lineTo (370,215) ;
+	ctx.lineTo (370,230) ;
+	ctx.lineTo (390,230) ;
+	ctx.lineTo (390,235) ;
+	ctx.lineTo (390,235) ;
+	ctx.lineTo (430,235) ;
+	ctx.lineTo (430,250) ;
+	ctx.lineTo (490,250) ;
+
+	ctx.moveTo(330, 270) ;
+	ctx.lineTo(280,270) ;
+	ctx.lineTo(280,290) ;
+	ctx.lineTo(290,290) ;
+	ctx.lineTo(290,280) ;
+	ctx.lineTo(290,280) ;
+	ctx.lineTo(330,280) ;
+	ctx.lineTo(330,270) ;
+
+
+
+	
+
+
+	
+
+	//use this later to fill wave color
+	/*ctx.fillStyle="#7474FB";
+	ctx.fill();*/
 
 	ctx.stroke();
 };
+
+function drawSun(){
+	var c=document.getElementById("sun");
+	var ctx=c.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(100,75,50,0,2*Math.PI);
+	ctx.fillStyle="orange";
+	ctx.fill();
+	ctx.stroke();
+}
+
