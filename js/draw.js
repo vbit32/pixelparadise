@@ -147,14 +147,16 @@ function drawWaves (idName){
 	ctx.lineTo(270, 200);
 	ctx.lineTo(270, 215);
 
-	ctx.moveTo(120, 220) ;
+//side wave 1
+	/*ctx.moveTo(120, 220) ;
 	ctx.lineTo(180, 220) ;
 	ctx.lineTo(180, 227) ;
 	ctx.lineTo(120, 227) ;
 	ctx.lineTo(120, 227) ;
-	ctx.lineTo(120, 220) ;
+	ctx.lineTo(120, 220) ;*/
 
-	ctx.moveTo(270, 215);
+//continue
+	//ctx.moveTo(270, 215) ;
 	ctx.lineTo (370,215) ;
 	ctx.lineTo (370,230) ;
 	ctx.lineTo (390,230) ;
@@ -162,16 +164,50 @@ function drawWaves (idName){
 	ctx.lineTo (390,235) ;
 	ctx.lineTo (430,235) ;
 	ctx.lineTo (430,250) ;
-	ctx.lineTo (490,250) ;
+	ctx.lineTo (550,250) ;
 
-	ctx.moveTo(330, 270) ;
+//side wave 2
+	/*ctx.moveTo(330, 270) ;
 	ctx.lineTo(280,270) ;
 	ctx.lineTo(280,290) ;
 	ctx.lineTo(290,290) ;
 	ctx.lineTo(290,280) ;
 	ctx.lineTo(290,280) ;
 	ctx.lineTo(330,280) ;
-	ctx.lineTo(330,270) ;
+	ctx.lineTo(330,270) ;*/
+
+//continue
+	//ctx.moveTo(550,250);
+	ctx.lineTo(550,230);
+	ctx.lineTo(590,230);
+	ctx.lineTo(590,220);
+	ctx.lineTo(660,220);
+	ctx.lineTo(660,210);
+	ctx.lineTo(590,210);
+	ctx.lineTo(590,200);
+	ctx.lineTo(700,200);
+	ctx.lineTo(700,190);
+	ctx.lineTo(740,190);
+	ctx.lineTo(740,170);
+	ctx.lineTo(700,170);
+	ctx.lineTo(700,160);
+	ctx.lineTo(790,160);
+	ctx.lineTo(790,150);
+	ctx.lineTo(800,150);
+	ctx.lineTo(800,140);
+	ctx.lineTo(650,140);
+	ctx.lineTo(650,130);
+	ctx.lineTo(850,130);
+	ctx.lineTo(850,90);
+	ctx.lineTo(920,90);
+	ctx.lineTo(920,50);
+	ctx.lineTo(950,50);
+	ctx.lineTo(950,0);
+	ctx.lineTo(0,0);
+
+
+	
+	
 
 
 
@@ -181,8 +217,8 @@ function drawWaves (idName){
 	
 
 	//use this later to fill wave color
-	/*ctx.fillStyle="#7474FB";
-	ctx.fill();*/
+	ctx.fillStyle="#7474FB";
+	ctx.fill();
 
 	ctx.stroke();
 };
