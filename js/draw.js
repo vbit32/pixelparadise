@@ -124,7 +124,7 @@ function drawWaves (idName){
 
     var canvas = document.getElementById(idName);
 	var ctx = canvas.getContext('2d');
-  	ctx.strokeStyle = "#7474FB";
+  	ctx.strokeStyle = "#676EC8";
 	ctx.beginPath();
 	ctx.moveTo(0, 0);
 	ctx.lineTo(0, 30);
@@ -205,7 +205,21 @@ function drawWaves (idName){
 	ctx.lineTo(950,0);
 	ctx.lineTo(0,0);
 
+	ctx.moveTo(330, 270) ;
+	ctx.lineTo(280,270) ;
+	ctx.lineTo(280,290) ;
+	ctx.lineTo(290,290) ;
+	ctx.lineTo(290,280) ;
+	ctx.lineTo(290,280) ;
+	ctx.lineTo(330,280) ;
+	ctx.lineTo(330,270) ;
 
+	ctx.moveTo(120, 220) ;
+	ctx.lineTo(180, 220) ;
+	ctx.lineTo(180, 227) ;
+	ctx.lineTo(120, 227) ;
+	ctx.lineTo(120, 227) ;
+	ctx.lineTo(120, 220) ;
 	
 	
 
@@ -217,7 +231,7 @@ function drawWaves (idName){
 	
 
 	//use this later to fill wave color
-	ctx.fillStyle="#7474FB";
+	ctx.fillStyle="#676EC8";
 	ctx.fill();
 
 	ctx.stroke();
