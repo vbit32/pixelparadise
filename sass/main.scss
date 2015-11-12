@@ -3,9 +3,14 @@
 	width:100%;
 	background: #424BBB;
 	overflow: visible;
+	position: relative;
+	z-index:99;
+
 	.waves {
 		z-index: 99;
-		margin:auto ;
+		width:  100%;
+ 		height: 100%;
+  		margin: 0 auto;
 		padding: 0;
 		display: block;
 	}
@@ -24,13 +29,21 @@
 		display:inline-block;
     	vertical-align:top;
 	}
-}
+	.sun-container {
+		width:100%;
+		height: 50%;
+		overflow: visible;
+		z-index:99;
+	}
 
-.sun{
-	z-index: 10;
-	margin: 0 auto;
-	padding: 0;
-	vertical-align: middle;
-	display: block;
-	position: absolute;
+	.sun{
+		z-index: 10;
+		width:  100%;
+ 		height: 100%;
+		margin: 0 auto;
+		padding: 0;
+		vertical-align: middle;
+		display: block;
+		position: absolute;
+	}
 }

@@ -124,126 +124,232 @@ function drawWaves (idName){
 
     var canvas = document.getElementById(idName);
 	var ctx = canvas.getContext('2d');
+
+  	ctx.canvas.width  = window.innerWidth;
+  	ctx.canvas.height = window.innerHeight;
+
   	ctx.strokeStyle = "#676EC8";
 	ctx.beginPath();
-	ctx.moveTo(0, 0);
-	ctx.lineTo(0, 30);
-	ctx.lineTo(100, 30);
-	ctx.lineTo(100, 100);
-	ctx.lineTo(150, 100);
-	ctx.lineTo(150, 110);
-	ctx.lineTo(75, 110);
-	ctx.lineTo(75, 130);
-	ctx.lineTo(170, 130);
-	ctx.lineTo(170, 150);
-	ctx.lineTo(120, 150);
-	ctx.lineTo(120, 160);
-	ctx.lineTo(120, 160);
-	ctx.lineTo(175, 160);
-	ctx.lineTo(175, 180);
-	ctx.lineTo(220, 180);
-	ctx.lineTo(250, 180);
-	ctx.lineTo(250, 200);
-	ctx.lineTo(270, 200);
-	ctx.lineTo(270, 215);
-
-//side wave 1
-	/*ctx.moveTo(120, 220) ;
-	ctx.lineTo(180, 220) ;
-	ctx.lineTo(180, 227) ;
-	ctx.lineTo(120, 227) ;
-	ctx.lineTo(120, 227) ;
-	ctx.lineTo(120, 220) ;*/
-
-//continue
-	//ctx.moveTo(270, 215) ;
-	ctx.lineTo (370,215) ;
-	ctx.lineTo (370,230) ;
-	ctx.lineTo (390,230) ;
-	ctx.lineTo (390,235) ;
-	ctx.lineTo (390,235) ;
-	ctx.lineTo (430,235) ;
-	ctx.lineTo (430,250) ;
-	ctx.lineTo (550,250) ;
-
-//side wave 2
-	/*ctx.moveTo(330, 270) ;
-	ctx.lineTo(280,270) ;
-	ctx.lineTo(280,290) ;
-	ctx.lineTo(290,290) ;
-	ctx.lineTo(290,280) ;
-	ctx.lineTo(290,280) ;
-	ctx.lineTo(330,280) ;
-	ctx.lineTo(330,270) ;*/
-
-//continue
-	//ctx.moveTo(550,250);
-	ctx.lineTo(550,230);
-	ctx.lineTo(590,230);
-	ctx.lineTo(590,220);
-	ctx.lineTo(660,220);
-	ctx.lineTo(660,210);
-	ctx.lineTo(590,210);
-	ctx.lineTo(590,200);
-	ctx.lineTo(700,200);
-	ctx.lineTo(700,190);
-	ctx.lineTo(740,190);
-	ctx.lineTo(740,170);
-	ctx.lineTo(700,170);
-	ctx.lineTo(700,160);
-	ctx.lineTo(790,160);
-	ctx.lineTo(790,150);
-	ctx.lineTo(800,150);
-	ctx.lineTo(800,140);
-	ctx.lineTo(650,140);
-	ctx.lineTo(650,130);
-	ctx.lineTo(850,130);
-	ctx.lineTo(850,90);
-	ctx.lineTo(920,90);
-	ctx.lineTo(920,50);
-	ctx.lineTo(950,50);
-	ctx.lineTo(950,0);
-	ctx.lineTo(0,0);
-
-	ctx.moveTo(330, 270) ;
-	ctx.lineTo(280,270) ;
-	ctx.lineTo(280,290) ;
-	ctx.lineTo(290,290) ;
-	ctx.lineTo(290,280) ;
-	ctx.lineTo(290,280) ;
-	ctx.lineTo(330,280) ;
-	ctx.lineTo(330,270) ;
-
-	ctx.moveTo(120, 220) ;
-	ctx.lineTo(180, 220) ;
-	ctx.lineTo(180, 227) ;
-	ctx.lineTo(120, 227) ;
-	ctx.lineTo(120, 227) ;
-	ctx.lineTo(120, 220) ;
-	
-	
-
-
-
-	
-
-
-	
-
-	//use this later to fill wave color
 	ctx.fillStyle="#676EC8";
-	ctx.fill();
+	ctx.moveTo(400, 0);
+	ctx.lineTo(400,50);
+	ctx.lineTo(550,50);
+	ctx.lineTo(550,80);
+	ctx.lineTo(500,80);
+	ctx.lineTo(500,100);
+	ctx.lineTo(590,100);
+	ctx.lineTo(590,120);
+	ctx.lineTo(480,120);
+	ctx.lineTo(480,150);
+	ctx.lineTo(530,150);
+	ctx.lineTo(530,180);
+	ctx.lineTo(620,180);
+	ctx.lineTo(620,180);
+	ctx.lineTo(620,195);
+	ctx.lineTo(500,195);
+	ctx.lineTo(500,215);
+	ctx.lineTo(640,215);
+	ctx.lineTo(640,290);
+	ctx.lineTo(660,290);
+	//insert side wave here
+	ctx.lineTo(660,310);
+	ctx.lineTo(610,310);
+	ctx.lineTo(610,340);
+	ctx.lineTo(690,340);
+	ctx.lineTo(690,340);
+	ctx.lineTo(690,380);
+	ctx.lineTo(650,380);
+	ctx.lineTo(650,400);
+	ctx.lineTo(650,400);
+	ctx.lineTo(750,400);
+	ctx.lineTo(750,440);
+	//insert another side wave
+	ctx.lineTo(770,440);
+	ctx.lineTo(770,470);
+	ctx.lineTo(650,470);
+	ctx.lineTo(650,485);
+	ctx.lineTo(800,485);
+	ctx.lineTo(800,500);
+	ctx.lineTo(860,500);
+	ctx.lineTo(860,520);
+	ctx.lineTo(960,520);
+	ctx.lineTo(960,520);
+	ctx.lineTo(960,500);
+//this is the tip, draw waves underneath
+	ctx.lineTo(1020,500);
+	ctx.lineTo(1020,460);
+	ctx.lineTo(1090,460);
+	ctx.lineTo(1090,440);
+	ctx.lineTo(1040,440);
+	ctx.lineTo(1040,420);
+	ctx.lineTo(1060,420);
+	ctx.lineTo(1060,400);
+	ctx.lineTo(1120,400);
+	ctx.lineTo(1120,385);
+	ctx.lineTo(1120,385);
+	ctx.lineTo(1000,385);
+	ctx.lineTo(1000,365);
+	ctx.lineTo(1170,365);
+	ctx.lineTo(1170,330);
+	ctx.lineTo(1130,330);
+	ctx.lineTo(1130,310);
+	ctx.lineTo(1190,310);
+	ctx.lineTo(1190,250);
+	ctx.lineTo(1210,250);
+	ctx.lineTo(1210,230);
+	ctx.lineTo(1180,230);
+	//insert another side wave to the right
+	ctx.lineTo(1180,230);
+	ctx.lineTo(1180,210);
+	ctx.lineTo(1090,210);
+	ctx.lineTo(1090,190);
+	ctx.lineTo(1290,190);
+	ctx.lineTo(1290,160);
+	ctx.lineTo(1200,160);
+	ctx.lineTo(1200,140);
+	ctx.lineTo(1180,140);
+	ctx.lineTo(1180,120);
+	ctx.lineTo(1250,120);
+	ctx.lineTo(1250,90);
+	ctx.lineTo(1360,90);
+	ctx.lineTo(1360,120);
+	ctx.lineTo(1420,120);
+	ctx.lineTo(1420,80);
+	ctx.lineTo(1460,80);
+	ctx.lineTo(1460,40);
+	ctx.lineTo(1480,40);
+	ctx.lineTo(1480,0);
+	//draw some right side waves here as well
+	ctx.lineTo(400,0);
 
+	//left side waves
+	ctx.moveTo(200,300);
+	ctx.lineTo(200,320);
+	ctx.lineTo(240,320);
+	ctx.lineTo(240,300);
+	ctx.lineTo(200,300);
+
+	ctx.moveTo(250,300);
+	ctx.lineTo(340,300) ;
+	ctx.lineTo(340,320) ;
+	ctx.lineTo(310,320) ;
+	ctx.lineTo(310,340) ;
+	ctx.lineTo(280,340) ;
+	ctx.lineTo(280,320) ;
+	ctx.lineTo(250,320) ;
+	ctx.lineTo(250,300) ;
+	
+	//use this later to fill wave color
+
+	//bottom waves/ dark waves
+
+	
+
+ 
+
+  	
+	ctx.fill();
+	ctx.closePath();
+
+	ctx.beginPath() ;
+	ctx.fillStyle="#2F3583";
+	ctx.strokeStyle = "#2F3583";
+	ctx.moveTo (0,800) ;
+	ctx.lineTo (100,800) ;
+	ctx.lineTo (100,850) ;
+	ctx.lineTo (160,850) ;
+	ctx.lineTo (160,830) ;
+	ctx.lineTo (200,830) ;
+	ctx.lineTo (200,810) ;
+	ctx.lineTo (320,810) ;
+	ctx.lineTo (320,840) ;
+	ctx.lineTo (280,840) ;
+	ctx.lineTo (280,860) ;
+	ctx.lineTo (380,860) ;
+	ctx.lineTo (380,840) ;
+	ctx.lineTo (398,840) ;
+	ctx.lineTo (398,810) ;
+	ctx.lineTo (450,810) ;
+	ctx.lineTo (450,760) ;
+	ctx.lineTo (580,760) ;
+	ctx.lineTo (580,790) ;
+	ctx.lineTo (620,790) ;
+	ctx.lineTo (620,830) ;
+	ctx.lineTo (730,830) ;
+	ctx.lineTo (730,810) ;
+	ctx.lineTo (700,810) ;
+	ctx.lineTo (700,795) ;
+	ctx.lineTo (850,795) ;
+	ctx.lineTo (850,745) ;
+	ctx.lineTo (810,745) ;
+	ctx.lineTo (810,735) ;
+	ctx.lineTo (970,735) ;
+	ctx.lineTo (970,765) ;
+	ctx.lineTo (995,765) ;
+	ctx.lineTo (995,795) ;
+	ctx.lineTo (1115,795) ;
+	ctx.lineTo (1115,815) ;
+	ctx.lineTo (935,815) ;
+	ctx.lineTo (935,835) ;
+	ctx.lineTo (1015,835) ;
+	ctx.lineTo (1015,865) ;
+	ctx.lineTo (1195,865) ;
+	ctx.lineTo (1195,825) ;
+	ctx.lineTo (1295,825) ;
+	ctx.lineTo (1295,775) ;
+	ctx.lineTo (1230,775) ;
+	ctx.lineTo (1230,755) ;
+	ctx.lineTo (1310,755) ;
+	ctx.lineTo (1310,738) ;
+	ctx.lineTo (1450,738) ;
+	ctx.lineTo (1450,718) ;
+	ctx.lineTo (1560,718) ;
+	ctx.lineTo (1560,728) ;
+	ctx.lineTo (1490,728) ;
+	ctx.lineTo (1490,750) ;
+	ctx.lineTo (1520,750) ;
+	ctx.lineTo (1520,770) ;
+	ctx.lineTo (1650,770) ;
+	ctx.lineTo (1650,800) ;
+	ctx.lineTo (1710,800) ;
+	ctx.lineTo (1710,750) ;
+	ctx.lineTo (1660,750) ;
+	ctx.lineTo (1660,730) ;
+	ctx.lineTo (1770,730) ;
+	ctx.lineTo (1770,750) ;
+	ctx.lineTo (1830,750) ;
+	ctx.lineTo (1830,770) ;
+	ctx.lineTo (1920,770) ;
+	ctx.lineTo (1920,979) ;
+	ctx.lineTo (0,979) ;
+	ctx.lineTo (0,800) ;
+
+
+
+	
+
+
+  	
+	ctx.fill();
 	ctx.stroke();
+	ctx.closePath();
+
+	
 };
 
 function drawSun(){
-	var c=document.getElementById("sun");
-	var ctx=c.getContext("2d");
+	
+    var canvas = document.getElementById("sun");
+	var ctx = canvas.getContext('2d');
+	ctx.canvas.width  = window.innerWidth;
+  	ctx.canvas.height = window.innerHeight;
+  	
 	ctx.beginPath();
-	ctx.arc(100,75,50,0,2*Math.PI);
+
+	ctx.arc(800,450,200,0,2*Math.PI);
 	ctx.fillStyle="orange";
 	ctx.fill();
 	ctx.stroke();
 }
+
 
