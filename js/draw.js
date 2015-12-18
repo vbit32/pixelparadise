@@ -124,9 +124,10 @@ function drawWaves (idName){
 
     var canvas = document.getElementById(idName);
 	var ctx = canvas.getContext('2d');
-
-  	ctx.canvas.width  = window.innerWidth;
-  	ctx.canvas.height = window.innerHeight;
+	ctx.canvas.style.width='100%';
+  	ctx.canvas.style.height='auto';
+ 	ctx.canvas.width  = canvas.offsetWidth;
+  	ctx.canvas.height = canvas.offsetHeight;
 
   	ctx.strokeStyle = "#676EC8";
 	ctx.beginPath();
@@ -175,6 +176,9 @@ function drawWaves (idName){
 	ctx.lineTo(960,520);
 	ctx.lineTo(960,520);
 	ctx.lineTo(960,500);
+
+	ctx.moveTo(900,480);
+	ctx.lineTo(850,480);
 //this is the tip, draw waves underneath
 	ctx.lineTo(1020,500);
 	ctx.lineTo(1020,460);
@@ -243,11 +247,6 @@ function drawWaves (idName){
 
 	//bottom waves/ dark waves
 
-	
-
- 
-
-  	
 	ctx.fill();
 	ctx.closePath();
 
@@ -343,13 +342,16 @@ function drawSun(){
 	var ctx = canvas.getContext('2d');
 	ctx.canvas.width  = window.innerWidth;
   	ctx.canvas.height = window.innerHeight;
-  	
+
 	ctx.beginPath();
 
-	ctx.arc(800,450,200,0,2*Math.PI);
+	ctx.arc(900,450,200,0,2*Math.PI);
 	ctx.fillStyle="orange";
 	ctx.fill();
 	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath() ;
 }
 
 

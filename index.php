@@ -12,7 +12,9 @@
 		<!--above the sky-->
 		<!--beneath the waves-->
 		<div class="water">
-			<canvas class="waves" id="yo"></canvas>
+			<div class="waves">
+				<canvas id="yo"></canvas>
+			</div>
 		</div>
 
 
